@@ -1,0 +1,2 @@
+var CLBG = 0xFFFA8072;
+var CLBG2 = 0xFFD9D9D9;
