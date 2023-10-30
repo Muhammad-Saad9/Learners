@@ -1,7 +1,5 @@
+import 'package:audio_player_tutorial2/SplashScreens/SplashScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:learner/GameScreens.dart/Abcd.dart';
-import 'package:learner/HomeScreen.dart';
-import 'package:learner/SplashScreens/SplashScreen.dart';
 
 void main() {
   runApp(Learner());

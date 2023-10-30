@@ -1,7 +1,11 @@
+import 'dart:async';
+
+import 'package:audio_player_tutorial2/Colors/HomescreenColors.dart';
+import 'package:audio_player_tutorial2/GameScreens.dart/Abcd.dart';
+import 'package:audio_player_tutorial2/GameScreens.dart/ColorLearning.dart';
+import 'package:audio_player_tutorial2/GameScreens.dart/numberlearning.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:learner/Colors/HomescreenColors.dart';
-import 'package:learner/GameScreens.dart/ColorLearning.dart';
-import 'package:learner/GameScreens.dart/Abcd.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -43,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                          color: Color.fromARGB(57, 155, 152, 125),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset("assets/LEARNERS LOGO.png"),
+                        color: Color.fromARGB(57, 155, 152, 125),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Image.asset("assets/LEARNERS LOGO.png"),
                   ),
                   SizedBox(
                     width: 10,
@@ -75,12 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: InkWell(
                       child: InkWell(
                     onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              GMSC2(), // Replace SecondScreen with your destination screen
-                        ),
-                      );
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => GMSC2()));
                     },
                     child: Padding(
                       padding: EdgeInsets.only(top: 40, left: 40),
@@ -108,10 +108,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         )),
                     child: InkWell(
                       onTap: () {
+                        AudioPlayer().play(AssetSource("ABCD LEARNING.mp3"));
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                Gmsc1(), // Replace SecondScreen with your destination screen
+                                GMSC2(), // Replace SecondScreen with your destination screen
                           ),
                         );
                       },
@@ -129,24 +130,34 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 10,
                 ),
                 Container(
-                    width: 300,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        color: Color(hbg2),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2,
-                        )),
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 40, left: 40),
-                      child: Text(
-                        "NUMBER LEARNING GAME",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20),
-                      ),
-                    )),
+                  width: 300,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Color(hbg2),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      )),
+                  child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Number(), // Replace SecondScreen with your destination screen
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40, left: 40),
+                        child: Text(
+                          "NUMBER LEARNING GAME",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 20),
+                        ),
+                      )),
+                ),
                 SizedBox(
                   height: 10,
                 ),

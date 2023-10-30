@@ -3,21 +3,24 @@ import 'package:audio_player_tutorial2/HomeScreen.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-class Gmsc1 extends StatefulWidget {
-  const Gmsc1({super.key});
+class Number extends StatefulWidget {
+  const Number({super.key});
 
   @override
-  State<Gmsc1> createState() => _Gmsc1State();
+  State<Number> createState() => _NumberState();
 }
 
-class _Gmsc1State extends State<Gmsc1> {
-  var songindex = "audios/red.mp3";
-  var songindex1 = "audios/yellow.mp3";
-  var songindex2 = "audios/green.mp3";
-  var songindex3 = "audios/white.mp3";
-  var songindex4 = "audios/blue.mp3";
-  var songindex5 = "audios/orange.mp3";
-  var songindex6 = "audios/purple.mp3";
+class _NumberState extends State<Number> {
+  var songindex = "audios/1.mp3";
+  var songindex1 = "audios/2.mp3";
+  var songindex2 = "audios/3.mp3";
+  var songindex3 = "audios/4.mp3";
+  var songindex4 = "audios/5.mp3";
+  var songindex5 = "audios/6.mp3";
+  var songindex6 = "audios/7.mp3";
+  var songindex7 = "audios/8.mp3";
+  var songindex8 = "audios/9.mp3";
+  var songindex9 = "audios/10.mp3";
 
   bool isPlaying = false;
   late final AudioPlayer player;
@@ -28,6 +31,9 @@ class _Gmsc1State extends State<Gmsc1> {
   late final AssetSource path4;
   late final AssetSource path5;
   late final AssetSource path6;
+  late final AssetSource path7;
+  late final AssetSource path8;
+  late final AssetSource path9;
 
   Duration _duration = const Duration();
   Duration _position = const Duration();
@@ -53,6 +59,9 @@ class _Gmsc1State extends State<Gmsc1> {
     path4 = AssetSource(songindex4);//
     path5 = AssetSource(songindex5);//
     path6 = AssetSource(songindex6);
+    path7 = AssetSource(songindex7);
+    path8 = AssetSource(songindex8);
+    path9 = AssetSource(songindex9);
 
     // set a callback for changing duration
     player.onDurationChanged.listen((Duration d) {
@@ -103,6 +112,21 @@ void playPause2() async {
   }
   void playPause6() async {
     player.play(path6);
+
+    setState(() {});
+  }
+  void playPause7() async {
+    player.play(path7);
+
+    setState(() {});
+  }
+  void playPause8() async {
+    player.play(path8);
+
+    setState(() {});
+  }
+  void playPause9() async {
+    player.play(path9);
 
     setState(() {});
   }
@@ -200,7 +224,17 @@ void playPause2() async {
                       ),
                       child: InkWell(onTap: () {
                         playPause();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("1",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
+                      
                     ),
                     SizedBox(
                       width: 5,
@@ -224,17 +258,26 @@ void playPause2() async {
                       ),
                       child: InkWell(onTap: () {
                         playPause1();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("2",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                     ),
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(8, 15, 8, 15),
+                  padding: EdgeInsets.fromLTRB(8, 15, 8, 0),
                   child: Row(
                     children: [
                       Container(
                         width: 115,
-                        height: 200,
+                        height: 170,
                         decoration: BoxDecoration(
                           color: Colors.green,
                           borderRadius: BorderRadius.circular(10),
@@ -251,14 +294,23 @@ void playPause2() async {
                         ),
                         child: InkWell(onTap: () {
                         playPause2();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("3",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Container(
                         width: 100,
-                        height: 200,
+                        height: 170,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -275,14 +327,23 @@ void playPause2() async {
                         ),
                         child: InkWell(onTap: () {
                         playPause3();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("4",
+                        style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Container(
                         width: 115,
-                        height: 200,
+                        height: 170,
                         decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10),
@@ -299,7 +360,16 @@ void playPause2() async {
                         ),
                         child: InkWell(onTap: () {
                         playPause4();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("5",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                       ),
                     ],
                   ),
@@ -308,12 +378,12 @@ void playPause2() async {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(8, 3, 8, 15),
+            padding: EdgeInsets.fromLTRB(8, 0, 8, 5),
             child: Row(
               children: [
                 Container(
                   width: 170,
-                  height: 200,
+                  height: 130,
                   decoration: BoxDecoration(
                     color: Colors.orange,
                     borderRadius: BorderRadius.circular(10),
@@ -330,14 +400,23 @@ void playPause2() async {
                   ),
                   child: InkWell(onTap: () {
                         playPause5();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("6",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Container(
                   width: 170,
-                  height: 200,
+                  height: 130,
                   decoration: BoxDecoration(
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(10),
@@ -354,7 +433,119 @@ void playPause2() async {
                   ),
                   child: InkWell(onTap: () {
                         playPause6();
-                      }),
+                      },
+                      child: Center(
+                        child: Text("7",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(8, 3, 8, 15),
+            child: Row(
+              children: [
+                Container(
+                  width: 110,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 0, 229, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black
+                            .withOpacity(0.2), // Shadow color and opacity
+                        spreadRadius: 2, // Spread radius
+                        blurRadius: 5, // Blur radius
+                        offset: Offset(
+                            0, 3), // Shadow offset (horizontal, vertical)
+                      ),
+                    ],
+                  ),
+                  child: InkWell(onTap: () {
+                        playPause();
+                      },
+                      child: Center(
+                        child: Text("8",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  width: 110,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.amber[200],
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black
+                            .withOpacity(0.2), // Shadow color and opacity
+                        spreadRadius: 2, // Spread radius
+                        blurRadius: 5, // Blur radius
+                        offset: Offset(
+                            0, 3), // Shadow offset (horizontal, vertical)
+                      ),
+                    ],
+                  ),
+                  child: InkWell(onTap: () {
+                        playPause8();
+                      },
+                      child: Center(
+                        child: Text("9",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  width: 110,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.pinkAccent,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black
+                            .withOpacity(0.2), // Shadow color and opacity
+                        spreadRadius: 2, // Spread radius
+                        blurRadius: 5, // Blur radius
+                        offset: Offset(
+                            0, 3), // Shadow offset (horizontal, vertical)
+                      ),
+                    ],
+                  ),
+                  child: InkWell(onTap: () {
+                        playPause9();
+                      },
+                      child: Center(
+                        child: Text("10",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30
+                        ),
+                        ),
+                      ),
+                      ),
                 ),
               ],
             ),
