@@ -70,7 +70,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   width: 300,
                   height: 100,
-                  decoration: BoxDecoration(
+                  decoration: BoxDecoration( boxShadow: [
+                          BoxShadow(
+                            color: Colors.black
+                                .withOpacity(0.2), // Shadow color and opacity
+                            spreadRadius: 2, // Spread radius
+                            blurRadius: 5, // Blur radius
+                            offset: Offset(
+                                0, 3), // Shadow offset (horizontal, vertical)
+                          ),
+                        ],
                       color: Color(hbg2),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
@@ -101,10 +110,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 300,
                     height: 100,
                     decoration: BoxDecoration(
+                       boxShadow: [
+                          BoxShadow(
+                            color: Colors.black
+                                .withOpacity(0.2), // Shadow color and opacity
+                            spreadRadius: 2, // Spread radius
+                            blurRadius: 5, // Blur radius
+                            offset: Offset(
+                                0, 3), // Shadow offset (horizontal, vertical)
+                          ),
+                        ],
                         color: Color(hbg2),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           color: Colors.white,
+                          
                           width: 2,
                         )),
                     child: InkWell(
@@ -113,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                GMSC2(), // Replace SecondScreen with your destination screen
+                                Gmsc1(), // Replace SecondScreen with your destination screen
                           ),
                         );
                       },
@@ -133,7 +153,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   width: 300,
                   height: 100,
-                  decoration: BoxDecoration(
+                  decoration: BoxDecoration( boxShadow: [
+                          BoxShadow(
+                            color: Colors.black
+                                .withOpacity(0.2), // Shadow color and opacity
+                            spreadRadius: 2, // Spread radius
+                            blurRadius: 5, // Blur radius
+                            offset: Offset(
+                                0, 3), // Shadow offset (horizontal, vertical)
+                          ),
+                        ],
                       color: Color(hbg2),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
@@ -145,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                Gmsc1(), // Replace SecondScreen with your destination screen
+                                Number(), // Replace SecondScreen with your destination screen
                           ),
                         );
                       },
@@ -165,7 +194,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                     width: 300,
                     height: 100,
-                    decoration: BoxDecoration(
+                    decoration: BoxDecoration( boxShadow: [
+                          BoxShadow(
+                            color: Colors.black
+                                .withOpacity(0.2), // Shadow color and opacity
+                            spreadRadius: 2, // Spread radius
+                            blurRadius: 5, // Blur radius
+                            offset: Offset(
+                                0, 3), // Shadow offset (horizontal, vertical)
+                          ),
+                        ],
                         color: Color(hbg2),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
@@ -201,7 +239,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   width: 300,
                   height: 100,
-                  decoration: BoxDecoration(
+                  decoration: BoxDecoration( boxShadow: [
+                          BoxShadow(
+                            color: Colors.black
+                                .withOpacity(0.2), // Shadow color and opacity
+                            spreadRadius: 2, // Spread radius
+                            blurRadius: 5, // Blur radius
+                            offset: Offset(
+                                0, 3), // Shadow offset (horizontal, vertical)
+                          ),
+                        ],
                       color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(12)),
                   child: Icon(
