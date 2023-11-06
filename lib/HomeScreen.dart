@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_player_tutorial2/Colors/HomescreenColors.dart';
 import 'package:audio_player_tutorial2/GameScreens.dart/Abcd.dart';
 import 'package:audio_player_tutorial2/GameScreens.dart/ColorLearning.dart';
+import 'package:audio_player_tutorial2/GameScreens.dart/funstories.dart';
 import 'package:audio_player_tutorial2/GameScreens.dart/numberlearning.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
@@ -144,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                Number(), // Replace SecondScreen with your destination screen
+                                Gmsc1(), // Replace SecondScreen with your destination screen
                           ),
                         );
                       },
@@ -171,6 +172,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.white,
                           width: 2,
                         )),
+                        child: InkWell(
+                           onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Funstories(), // Replace SecondScreen with your destination screen
+                          ),
+                        );
+                        },
                     child: Padding(
                       padding: EdgeInsets.only(top: 40, left: 40),
                       child: Text(
@@ -179,7 +189,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 20),
                       ),
-                    )),
+                    )
+                        ),
+                    ),
                 SizedBox(
                   height: 10,
                 ),
